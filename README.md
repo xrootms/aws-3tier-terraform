@@ -12,11 +12,7 @@
 
 ## 📋 **Project Overview**
 
-A **fully automated Multi-Tier Web Application Architecture** deployed on **AWS Cloud**.
-
-This project implements a **scalable, secure, and automated** 3-tier architecture using modern DevOps tools.  
-It includes a **VPC** with public and private subnets, **Application Load Balancer**, **EC2 instances** for web and app tiers, and **RDS** for the database tier.  
-**Terraform** automates infrastructure provisioning, **Jenkins** handles CI/CD pipelines, and **Docker** ensures consistent deployments.
+A fully automated deployment of a **multi-tier web application architecture** on **AWS**. The infrastructure consists of a VPC with public and private subnets, Internet Gateway, NAT Gateway, **Application Load Balancer**, **EC2 instances** (for web and app tiers), and **RDS** (for database tier). **Terraform** was used for infrastructure provisioning, **Jenkins** for continuous integration and delivery, and **Docker** for application containerization.
 
 ---
 
