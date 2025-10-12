@@ -22,20 +22,20 @@ A fully automated deployment of a **multi-tier web application architecture** on
 |--------------|-----------------|
 | 🏢 **Organization** | Kellton Solution Ltd. |
 | 👥 **Team Size** | 3 |
-| 🧰 **Technology Stack** | <img src="https://skillicons.dev/icons?i=aws,terraform,jenkins,git,docker,ansible,nginx" /> |
+| 🧰 **Technology Stack** | AWS, Git, Jenkins, Docker, Terraform, Ansible, Nginx, MySQL, CloudWatch |
 | 🕓 **Duration** | Ongoing / Completed (as applicable) |
 
 ---
 
 ## ⚙️ **Role & Responsibilities**
 
-- 🧩 Designed and implemented a **3-Tier architecture** (Web, App, DB) on AWS using **Terraform modules**.  
-- ⚙️ Created and maintained **Jenkins pipelines** for continuous integration and delivery.  
-- 🐳 **Containerized** the web and app layers using **Docker** and deployed them on **EC2 instances**.  
-- 🧾 Automated configuration management with **Ansible**.  
-- 🌐 Set up **Nginx** as a reverse proxy and load balancer.  
-- 📊 Integrated **AWS CloudWatch** for monitoring and centralized logging.  
-- 🔒 Applied **IAM roles**, **security groups**, and **private subnets** for secure deployments.
+- Designed and implemented a highly available 3-tier architecture on AWS using Terraform modules. 
+- Configured Jenkins pipelines for automated build, test, and deployment processes. 
+- **Containerized** the web and app layers using **Docker** and deployed them on **EC2 instances**.  
+- Used Ansible for configuration management, Set up **Nginx** as a reverse proxy and load balancer. 
+- Integrated **AWS CloudWatch** for monitoring and centralized logging.  
+- Applied **IAM roles**, **security groups**, and **private subnets** for secure deployments.
+
 
 ---
 
@@ -44,14 +44,6 @@ A fully automated deployment of a **multi-tier web application architecture** on
 ✅ Automated end-to-end infrastructure provisioning and deployment.  
 ✅ Improved scalability, security, and monitoring across environments.  
 ✅ Reduced manual effort through **CI/CD** and **Infrastructure as Code (IaC)** automation.
-
----
-
-## 🚀 **Tools & Technologies**
-
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=aws,terraform,jenkins,git,docker,ansible,nginx,vscode,linux" />
-</p>
 
 ---
 
