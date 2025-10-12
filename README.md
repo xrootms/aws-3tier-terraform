@@ -29,7 +29,7 @@ A fully automated deployment of a **multi-tier web application architecture** on
 
 ## ⚙️ **Role & Responsibilities**
 
-- Designed and implemented a highly available 3-tier architecture on AWS using Terraform modules. 
+- Setup and managed a highly available 3-tier architecture on AWS using Terraform modules. 
 - Configured Jenkins pipelines for automated build, test, and deployment processes. 
 - **Containerized** the web and app layers using **Docker** and deployed them on **EC2 instances**.  
 - Used Ansible for configuration management, Set up **Nginx** as a reverse proxy and load balancer. 
