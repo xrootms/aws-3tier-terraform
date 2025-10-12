@@ -35,8 +35,10 @@ A fully automated deployment of a **multi-tier web application architecture** on
 - Used Ansible for configuration management, Set up **Nginx** as a reverse proxy and load balancer. 
 - Integrated **AWS CloudWatch** for monitoring and centralized logging.  
 - Applied **IAM roles**, **security groups**, and **private subnets** for secure deployments.
+- Implemented cost optimization strategies using Auto Scaling, right-sized and reserved instances, automated scheduling to pause idle servers and databases, and monitored spend with AWS Cost Explorer.
 
 
+fficient resource scheduling to turn off or scale down non-production servers and databases when not in use 
 ---
 
 ## 🌟 **Outcome**
