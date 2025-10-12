@@ -2,6 +2,14 @@
 
 ---
 
+## 🖼️ **Architecture Overview**
+
+*(Project architecture diagram — replace the link below with your actual image once available)*  
+
+
+
+---
+
 ## 📋 **Project Overview**
 
 A **fully automated Multi-Tier Web Application Architecture** deployed on **AWS Cloud**.
@@ -51,7 +59,15 @@ It includes a **VPC** with public and private subnets, **Application Load Balanc
 
 ---
 
-## 🖼️ **Architecture Overview**
+## 🧠 **Key Learnings**
 
-*(Optional — you can add a diagram or banner image here)*  
-Example:  
+- Deep understanding of **Terraform** for reusable infrastructure modules.  
+- Practical experience with **Jenkins pipelines** for automation.  
+- Hands-on with **AWS networking**, **load balancing**, and **monitoring**.  
+- Improved workflow efficiency through **IaC** and **DevOps best practices**.
+
+---
+
+⭐ **If you found this project interesting, consider giving it a star!**  
+🔗 *#AWS #Terraform #Jenkins #DevOps #Cloud #InfrastructureAsCode*
+
