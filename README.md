@@ -4,7 +4,17 @@
 
 ## 🖼️ **Architecture Overview**
 
-*(Project architecture diagram — replace the link below with your actual image once available)*  
+multi-tier-aws/
+
+├─ ansible/
+│  └─ main.tf
+│
+├─ jenkins/
+│  └─ main.tf
+├─ docs/
+│  └─ architecture-diagram.png
+└─ README.md
+
 
 
 
