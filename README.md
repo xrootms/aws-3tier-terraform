@@ -1,5 +1,4 @@
-# 🏗️ Project: Multi-Tier Architecture on AWS using Terraform & Jenkins
-
+# Multi-Tier Architecture on AWS using Terraform & Jenkins
 ---
 
 ## 🖼️ **Architecture Overview**
@@ -14,8 +13,6 @@ multi-tier-aws/
 ├─ docs/
 │  └─ architecture-diagram.png
 └─ README.md
-
-
 
 
 ---
@@ -51,7 +48,7 @@ A fully automated deployment of a **multi-tier web application architecture** on
 fficient resource scheduling to turn off or scale down non-production servers and databases when not in use 
 ---
 
-## 🌟 **Outcome**
+## **Outcome**
 
 ✅ Automated end-to-end infrastructure provisioning and deployment.  
 ✅ Improved scalability, security, and monitoring across environments.  
@@ -59,7 +56,7 @@ fficient resource scheduling to turn off or scale down non-production servers an
 
 ---
 
-## 🧠 **Key Learnings**
+##  **Key Learnings**
 
 - Deep understanding of **Terraform** for reusable infrastructure modules.  
 - Practical experience with **Jenkins pipelines** for automation.  
