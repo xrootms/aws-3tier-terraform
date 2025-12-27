@@ -6,6 +6,27 @@ variable "ap_availability_zone" {}
 variable "cidr_private_subnet" {}
 
 
+output "srl_proj_dev_vpc_id" {
+  value = aws_vpc.srl_proj_dev_vpc.id
+}
+
+output "srl_proj_dev_public_subnets" {
+  value = aws_subnet.srl_proj_dev_public_subnets.*.id
+}
+
+output "public_subnet_cidr_block" {
+  value =aws_subnet" "srl_proj_dev_public_subnets.*.cidr_block
+}
+
+
+# output "srl_proj_dev_private_subnets" {
+#   value = aws_subnet.srl_proj_dev_private_subnets.*.id
+# }
+
+# output "private_subnet_cidr_block" {
+#   value =aws_subnet.srl_proj_dev_private_subnets.*.cidr_block
+# }
+
 
 #setup vpc
 resource "aws_vpc" "srl_proj_dev_vpc" {
@@ -14,7 +35,6 @@ resource "aws_vpc" "srl_proj_dev_vpc" {
 }
 
 # setup public subnet
-
 resource "aws_subnet" "srl_proj_dev_public_subnets"{
     count = length(var.cidr_public_subnet)
     vpc_id = aws_vpc.srl_proj_dev_vpc.id
