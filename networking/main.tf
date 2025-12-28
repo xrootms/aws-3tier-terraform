@@ -15,7 +15,7 @@ output "srl_proj_dev_public_subnets" {
 }
 
 output "public_subnet_cidr_block" {
-  value =aws_subnet" "srl_proj_dev_public_subnets.*.cidr_block
+  value =aws_subnet.srl_proj_dev_public_subnets.*.cidr_block
 }
 
 
