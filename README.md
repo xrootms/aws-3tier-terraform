@@ -27,9 +27,9 @@ A fully automated deployment of a **multi-tier web application architecture** on
 
 | **Details** | **Information** |
 |--------------|-----------------|
-| 🏢 **Organization** | Kellton Solution Ltd. |
+| 🏢 **Organization** | Solution Ltd. |
 | 👥 **Team Size** | 3 |
-| 🧰 **Technology Stack** | AWS, Git, Jenkins, Docker, Terraform, Ansible, Nginx, MySQL, CloudWatch |
+| 🧰 **Technology Stack** | AWS, Git, Jenkins, Docker, Terraform, Ansible, Flask, MySQL, CloudWatch |
 | 🕓 **Duration** | Ongoing / Completed (as applicable) |
 
 ---
