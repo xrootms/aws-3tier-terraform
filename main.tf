@@ -26,3 +26,31 @@ module "ec2" {
   user_data_install_app    = templatefile("./template/ec2_install_app.sh", {})
   key_name                  = aws_key_pair.main_key.key_name
 }
+
+module "lb_target_group" {
+  source                   = "./load-balancer-target-group"
+  lb_target_group_name     = "srl-proj-dev-lb-target-group"
+  lb_target_group_port     = 5000
+  lb_target_group_protocol = "HTTP"
+  vpc_id                   = module.networking.srl_proj_dev_vpc_id
+  ec2_instance_id          = module.ec2.app_ec2_instance_id
+}
+
+module "alb" {
+  source                    = "./load-balancer"
+  lb_name                   = "srl-proj-dev-alb"
+  is_external               = false
+  lb_type                   = "application"
+  sg_enable_ssh_https       = module.security_group.sg_ec2_sg_ssh_http_id
+  subnet_ids                = tolist(module.networking.srl_proj_dev_public_subnets)
+  tag_name                  = "srl-proj-dev-alb"
+  lb_target_group_arn       = module.lb_target_group.srl_proj_dev_lb_target_group_arn
+  ec2_instance_id           = module.ec2.app_ec2_instance_id
+  lb_target_group_attachment_port = 5000
+  lb_http_listner_port       = 80
+  lb_http_listner_protocol   = "HTTP"
+  lb_listner_default_action  = "forward"
+  lb_https_listner_port     = 443
+  lb_https_listner_protocol = "HTTPS"
+  srl_proj_dev_acm_arn      = module.aws_ceritification_manager.srl_proj_dev_acm_arn
+
