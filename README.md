@@ -1,3 +1,85 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Project Overview
+
+
+
+#### Main components:
+
+- ➡️ Custom VPC with public subnets, Private subnet, Nat gateway, Internet Gateway, and route tables
+- ➡️ Security Groups for Flask-App(EC2), RDS and ALB
+- ➡️ EC2 Instance for Flask (with User Data installation & DB table script)
+- ➡️ Target Group and Application Load Balancer (ALB) setup
+- ➡️ RDS Instance for MysQl
+- ➡️ S3 Bucket
+- ➡️ IAM Role to access S3 from Ec2
+- ➡️ ACM Certificate for HTTPS
+- ➡️ DNS Integration with Route 53
+
+## Prerequisites
+Before Running Terraform, Make sure you have the following prerequisites ready:
+
+- ➡️ Terraform v1.3+ (recommended)
+- ➡️ AWS CLI configured with proper IAM credentials
+- ➡️ A registered domain name (e.g., from GoDaddy, Namecheap, etc.)
+- ➡️ Hosted Zone created in Route 53 — Example: hosted zone name: techsaif.gzz.io
+- ➡️ Name Servers updated at your domain registrar
+- ➡️ Public and Private Key
+
+  ## *Step 1:* 
+### Setup Hosted Zone :
+To work with this whole setup we need to setup  Route53 and in Route53 we first need to setup our hosted zone.
+
+- 1️⃣  Navigate to Route 53 → Hosted zones → Create hosted zone
+- 2️⃣  In the Domain name field, enter the exact domain name you own (e.g., techsaif.gzz.io)
+- 3️⃣  Select Type → Public hosted zone
+- 4️⃣  Click Create hosted zone
+ <p align="center">
+  <img src="./image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+</p>
+
+- 5️⃣ Once you created you will get these four records which is "ns records".
+ <p align="center">
+  <img src="./image/03-hostedzoneimage2.png" alt="LEMP Diagram" width="800">
+</p>
+
+- 6️⃣ Update these ns recode over your domine register's ns recode.
+<p align="center">
+  <img src="./image/04-registarupdateimage.png" alt="LEMP Diagram" width="600">
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Multi-Tier Architecture on AWS using Terraform & Jenkins!!
 ---
 
