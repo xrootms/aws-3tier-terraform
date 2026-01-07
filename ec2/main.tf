@@ -1,5 +1,6 @@
 variable "ami_id" {}
 variable "instance_type" {}
+variable "iam_instance_profile" {}
 variable "ec2_tag_name" {}
 variable "key_name" {}
 variable "subnet_id" {}
@@ -18,6 +19,7 @@ output "app_ec2_instance_public_ip" {
 resource "aws_instance" "srl_proj_dev_ec2" {
     ami = var.ami_id
     instance_type = var.instance_type
+    iam_instance_profile   = var.iam_instance_profile
     tags = { Name = var.ec2_tag_name }
 
     key_name                    = var.key_name
