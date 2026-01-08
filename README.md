@@ -53,14 +53,14 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 
 - 5️⃣ Once you created you will get four records which is **"ns records"**.
 
-  <p align="left">
+  <p align="center">
   <img src="./doc/image/ns-4.png" alt="LEMP Diagram" width="900">
   </p>
   
 
 - 6️⃣ Update these ns recode over your domine register's ns recode.
 
-  <p align="left">
+  <p align="center">
   <img src="./doc/image/domineregister.png" alt="LEMP Diagram" width="800">
   </p>
 
@@ -87,7 +87,7 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
    ```
 #### 5. Get ssh connection for EC2:
 
-<p align="left">
+<p align="center">
   <img src="./doc/image/apply.png" alt="LEMP Diagram" width="1000">
 </p>
 
@@ -98,14 +98,14 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 
   - *The ALB DNS name is mapped to techsaif.gzz.io using a Route 53 A record*
 
-<p align="left">
+<p align="center">
   <img src="./doc/image/r53-hotedzone.png" alt="LEMP Diagram" width="1000">
 </p
 
 🔹**SSL Configuration:**
   - *An ACM Certificate is created for: techsaif.gzz.io and attached to the ALB for https traffic.*
 
-<p align="left">
+<p align="center">
   <img src="./doc/image/acm.png" alt="LEMP Diagram" width="1000">
 </p
 
@@ -118,7 +118,7 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
   - *Once Terraform apply completes and DNS propagation finishes:*
   - *Open https://jenkins.techsaif.gzz.io in your browser.*
   - 
-<p align="left">
+<p align="center">
   <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
 </p
 
