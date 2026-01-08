@@ -6,3 +6,7 @@ variable "cidr_private_subnet" {}
 
 
 variable "ec2_ami_id" {}
+
+variable "domain_name" {}
+
+variable "bucket_name" {}
