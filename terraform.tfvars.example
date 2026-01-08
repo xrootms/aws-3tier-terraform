@@ -10,6 +10,14 @@ key_name = "devops_proj1"
 
 ec2_ami_id = "ami-07f07a6e1060cd2a8"
 
+domain_name = "techsaif.qzz.io"
+
+bucket_name = "srl-proj-dev-image-bucket-89897612"
+
+
+
+
+
 #key name- devops_proj1.pub
 
 #t2.micro
