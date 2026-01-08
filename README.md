@@ -45,7 +45,6 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 - 2️⃣  In the Domain name field, enter the exact domain name you own (e.g., techsaif.gzz.io)
 - 3️⃣  Select Type → Public hosted zone
 - 4️⃣  Click Create hosted zone
-
 ---
 
  <p align="left">
@@ -72,8 +71,8 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 ## *Step 2:*
 ####  Clone the repo:
    ```bash
-   git clone https://github.com/xrootms/aws-2tier-terraform.git
-   cd terraform-jenkins-setup
+   git clone https://github.com/xrootms/https://github.com/xrootms/aws-2tier-architecture-terraform.git
+   cd aws-2tier-architecture-terraform
 
 #### 2. Copy and edit variables: (Update variable values as needed — VPC, CIDR, public key, region, etc.)
    ```bash
