@@ -41,6 +41,7 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 - 1️⃣  Navigate to Route 53 → Hosted zones → Create hosted zone
 - 2️⃣  In the Domain name field, enter the exact domain name you own (e.g., techsaif.gzz.io)
 - 3️⃣  Select Type → Public hosted zone
+---
 - 4️⃣  Click Create hosted zone
 
  <p align="center">
