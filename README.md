@@ -1,8 +1,7 @@
 # AWS 2-Tier Flask Web Application Architecture using Terraform Modules
 *This project demonstrates the design and deployment of a scalable, highly available 2-tier web application on AWS using reusable Terraform modules. The infrastructure includes a custom VPC, public and private subnets, SSL certificate, EC2-based Flask application server behind an Application Load Balancer, an Amazon RDS MySQL database, and Amazon S3 for storage, enabling automated, secure, and production-style cloud provisioning.*
 
-### Diagram
----
+## Diagram
 
 <p align="center">
   <img src="./doc/image/diagram.jpg" alt="LEMP Diagram" width="1000">
@@ -34,7 +33,8 @@ Before Running Terraform, Make sure you have the following prerequisites ready:
 - ➡️ Name Servers updated at your domain registrar
 - ➡️ Public and Private Key
 
-  ## *Step 1:* 
+## *Step 1:* 
+
 ### Setup Hosted Zone :
 To work with this whole setup we need to setup  Route53 and in Route53 we first need to setup our hosted zone.
 
@@ -64,6 +64,7 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
   ---
 
 ## *Step 2:*
+
 ####  Clone the repo:
 ```bash
    git clone https://github.com/xrootms/https://github.com/xrootms/aws-2tier-architecture-terraform.git
