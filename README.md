@@ -1,17 +1,13 @@
+# AWS 2-Tier Flask Web Application Architecture using Terraform Modules
+*This project demonstrates the design and deployment of a scalable, highly available 2-tier web application on AWS using reusable Terraform modules. The infrastructure includes a custom VPC, public and private subnets, SSL certificate, EC2-based Flask application servers behind an Application Load Balancer, an Amazon RDS MySQL database, and Amazon S3 for storage, enabling automated, secure, and production-style cloud provisioning.*
 
+### Diagram
 
+<p align="center">
+  <img src="./doc/image/diagram.jpg" alt="LEMP Diagram" width="400">
+</
 
-
-
-
-
-
-
-
-
-
-
-
+--- 
 
 ## Project Overview
 
@@ -116,22 +112,21 @@ sudo python3 EmpApp.py
 🔹**Accessing Flask-App:**
   - *Once Terraform apply completes and DNS propagation finishes:*
   - *Open https://techsaif.gzz.io in your browser.*
+  - *Ubload image and data.*
  
 <p align="center">
   <img src="./doc/image/domain.png" alt="LEMP Diagram" width="900">
 </p
 
-<p align="center">
-  <img src="./doc/image/amdomin.png" alt="LEMP Diagram" width="900">
-</p
 
-#### Verify MySql DB 
+- *Verify MySql DB*
 
 <p align="center">
   <img src="./doc/image/rds-table.png" alt="LEMP Diagram" width="900">
 </p
 
-#### Verify S3 bucket
+- *Verify S3 bucket*
+- 
 <p align="center">
   <img src="./doc/image/s3-object-images.png" alt="LEMP Diagram" width="900">
 </p
@@ -152,17 +147,21 @@ sudo python3 EmpApp.py
   <img src="./doc/image/acm.png" alt="LEMP Diagram" width="1000">
 </p
 
-🔹**EC2 Installation (User Data):**
+🔹**EC2**
 
-  - *During EC2 instance creation, a user data script automatically installs app + configures database.*
-  - **Script used:** template/ec2_install_app.sh*
-
-🔹**Accessing Jenkins:**
-  - *Once Terraform apply completes and DNS propagation finishes:*
-  - *Open https://jenkins.techsaif.gzz.io in your browser.*
-  - 
 <p align="center">
-  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+  <img src="./doc/image/ec2.png" alt="LEMP Diagram" width="1000">
+</p
+  
+🔹**ELB**
+
+<p align="center">
+  <img src="./doc/image/lb.png" alt="LEMP Diagram" width="1000">
+</p
+
+🔹**Security Groups**
+<p align="center">
+  <img src="./doc/image/sg.png" alt="LEMP Diagram" width="400">
 </p
 
 
