@@ -1,10 +1,10 @@
 # AWS 2-Tier Flask Web Application Architecture using Terraform Modules
-*This project demonstrates the design and deployment of a scalable, highly available 2-tier web application on AWS using reusable Terraform modules. The infrastructure includes a custom VPC, public and private subnets, SSL certificate, EC2-based Flask application servers behind an Application Load Balancer, an Amazon RDS MySQL database, and Amazon S3 for storage, enabling automated, secure, and production-style cloud provisioning.*
+*This project demonstrates the design and deployment of a scalable, highly available 2-tier web application on AWS using reusable Terraform modules. The infrastructure includes a custom VPC, public and private subnets, SSL certificate, EC2-based Flask application server behind an Application Load Balancer, an Amazon RDS MySQL database, and Amazon S3 for storage, enabling automated, secure, and production-style cloud provisioning.*
 
 ### Diagram
 
 <p align="center">
-  <img src="./doc/image/diagram.jpg" alt="LEMP Diagram" width="400">
+  <img src="./doc/image/diagram.jpg" alt="LEMP Diagram" width="1000">
 </
 
 --- 
