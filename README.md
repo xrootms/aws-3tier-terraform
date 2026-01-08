@@ -15,8 +15,6 @@
 
 ## Project Overview
 
-
-
 #### Main components:
 
 - ➡️ Custom VPC with public subnets, Private subnet, Nat gateway, EIP, Internet Gateway, and route tables
@@ -53,7 +51,92 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 </p>
 
 - 5️⃣ Once you created you will get four records which is **"ns records"**.
+
+  <p align="left">
+  <img src="./doc/image/ns-4.png" alt="LEMP Diagram" width="400">
+  </p>
+ 
 - 6️⃣ Update these ns recode over your domine register's ns recode.
+
+  <p align="left">
+  <img src="./doc/image/domineregister.png" alt="LEMP Diagram" width="400">
+  </p>
+
+  ---
+
+## *Step 2:*
+####  Clone the repo:
+   ```bash
+   git clone https://github.com/xrootms/aws-2tier-terraform.git
+   cd terraform-jenkins-setup
+
+#### 2. Copy and edit variables: (Update variable values as needed — VPC, CIDR, public key, region, etc.)
+   ```bash
+   cp terraform.tfvars.example terraform.tfvars
+   ```
+#### 3. Initialize Terraform:
+   ```bash
+   terraform init
+   ```
+#### 4. Plan and Apply:
+   ```bash
+   terraform plan
+   terraform apply
+   ```
+#### 5. Get ssh connection for EC2:
+
+<p align="left">
+  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+</p>
+
+---
+## *After successful deployment:*
+
+🔹**Hosted zone:**
+
+  - *The ALB DNS name is mapped to jenkins.techsaif.gzz.io using a Route 53 A record*
+
+<p align="left">
+  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+</p
+
+🔹**SSL Configuration:**
+  - *An ACM Certificate is created for: jenkins.techsaif.gzz.io and attached to the ALB for https traffic.*
+
+<p align="left">
+  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+</p
+
+🔹**Jenkins Installation (User Data):**
+
+  - *During EC2 instance creation, a user data script automatically installs and configures Jenkins and Terraform.*
+  - **Script used:** jenkins-runner-script/jenkins-installer.sh*
+
+<p align="left">
+  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+</p
+
+🔹**Accessing Jenkins:**
+  - *Once Terraform apply completes and DNS propagation finishes:*
+  - *Open https://jenkins.techsaif.gzz.io in your browser.*
+  - 
+<p align="left">
+  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+</p
+
+
+---  
+**Notes**
+- ➡️ ACM and ALB must be in the same AWS region
+- ➡️ DNS propagation may take up to 30 minutes
+- ➡️ Check ACM validation status in AWS Console → Certificate Manager
+- ➡️ To avoid unnecessary costs, destroy the infrastructure when no longer needed
+
+```bash
+terraform destroy    
+```
+
+  ⭐ If you found this project interesting, consider giving it a star!
 
 
 
