@@ -82,11 +82,13 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
    terraform plan
    terraform apply
    ```
+---
 #### 5. Get ssh connection for EC2:
 
 <p align="center">
   <img src="./doc/image/apply.png" alt="LEMP Diagram" width="1000">
 </p>
+---
 
 **SSH EC2**
 ```bash
@@ -112,20 +114,20 @@ sudo python3 EmpApp.py
 🔹**Accessing Flask-App:**
   - *Once Terraform apply completes and DNS propagation finishes:*
   - *Open https://techsaif.gzz.io in your browser.*
-  - *Ubload image and data.*
+*Ubload image and data.*
  
 <p align="center">
   <img src="./doc/image/domain.png" alt="LEMP Diagram" width="900">
 </p
 
 
-- *Verify MySql DB*
+- **Verify MySql DB**
 
 <p align="center">
   <img src="./doc/image/rds-table.png" alt="LEMP Diagram" width="900">
 </p
 
-- *Verify S3 bucket*
+- **Verify S3 bucket**
 - 
 <p align="center">
   <img src="./doc/image/s3-object-images.png" alt="LEMP Diagram" width="900">
@@ -139,6 +141,7 @@ sudo python3 EmpApp.py
 <p align="center">
   <img src="./doc/image/r53-hotedzone.png" alt="LEMP Diagram" width="1000">
 </p
+---
 
 🔹**SSL Configuration:**
   - *An ACM Certificate is created for: techsaif.gzz.io and attached to the ALB for https traffic.*
@@ -146,12 +149,14 @@ sudo python3 EmpApp.py
 <p align="center">
   <img src="./doc/image/acm.png" alt="LEMP Diagram" width="1000">
 </p
+---
 
 🔹**EC2**
 
 <p align="center">
   <img src="./doc/image/ec2.png" alt="LEMP Diagram" width="1000">
 </p
+---
   
 🔹**ELB**
 
