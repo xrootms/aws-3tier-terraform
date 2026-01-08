@@ -19,13 +19,13 @@ output "public_subnet_cidr_block" {
 }
 
 
-# output "srl_proj_dev_private_subnets" {
-#   value = aws_subnet.srl_proj_dev_private_subnets.*.id
-# }
+output "srl_proj_dev_private_subnets" {
+  value = aws_subnet.srl_proj_dev_private_subnets.*.id
+}
 
-# output "private_subnet_cidr_block" {
-#   value =aws_subnet.srl_proj_dev_private_subnets.*.cidr_block
-# }
+output "private_subnet_cidr_block" {
+  value =aws_subnet.srl_proj_dev_private_subnets.*.cidr_block
+}
 
 
 #setup vpc
@@ -75,27 +75,27 @@ resource "aws_route_table_association" "srl_proj_dev_public_rt_subnet_associatio
   route_table_id = aws_route_table.srl_proj_dev_public_route_table.id
 }
 
-# #Create an Elastic IP (EIP)
-# resource "aws_eip" "srl_proj_dev_nat_eip" {
-#   domain = "vpc"
-#   tags = { Name = "dev-proj-1-nat-eip" }
-# }
+#Create an Elastic IP (EIP)
+resource "aws_eip" "srl_proj_dev_nat_eip" {
+  domain = "vpc"
+  tags = { Name = "dev-proj-1-nat-eip" }
+}
 
-# #Create NAT Gateway
-# resource "aws_nat_gateway" "srl_proj_dev_nat" {
-#   allocation_id = aws_eip.srl_proj_dev_nat_eip.id
-#   subnet_id     = aws_subnet.srl_proj_dev_public_subnets[0].id
+#Create NAT Gateway
+resource "aws_nat_gateway" "srl_proj_dev_nat" {
+  allocation_id = aws_eip.srl_proj_dev_nat_eip.id
+  subnet_id     = aws_subnet.srl_proj_dev_public_subnets[0].id
 
-#   tags = { Name = "dev-proj-1-nat-gateway" }
-# }
+  tags = { Name = "dev-proj-1-nat-gateway" }
+}
 
 # Private Route-Table
 resource "aws_route_table" "srl_proj_dev_private_route_table" {
   vpc_id = aws_vpc.srl_proj_dev_vpc.id
-  # route {
-  #   cidr_block = "0.0.0.0/0"
-  #   nat_gateway_id = aws_nat_gateway.srl_proj_dev_nat.id
-  # }
+  route {
+    cidr_block = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.srl_proj_dev_nat.id
+  }
   tags = { Name = "srl_proj_dev_private-rt" }
 }
 
