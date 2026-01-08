@@ -91,7 +91,7 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 #### 5. Get ssh connection for EC2:
 
 <p align="left">
-  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="800">
+  <img src="./doc/image/apply.png" alt="LEMP Diagram" width="800">
 </p>
 
 ---
@@ -99,27 +99,23 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 
 🔹**Hosted zone:**
 
-  - *The ALB DNS name is mapped to jenkins.techsaif.gzz.io using a Route 53 A record*
+  - *The ALB DNS name is mapped to techsaif.gzz.io using a Route 53 A record*
 
 <p align="left">
-  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="800">
+  <img src="./doc/image/r53-hotedzone.png" alt="LEMP Diagram" width="800">
 </p
 
 🔹**SSL Configuration:**
-  - *An ACM Certificate is created for: jenkins.techsaif.gzz.io and attached to the ALB for https traffic.*
+  - *An ACM Certificate is created for: techsaif.gzz.io and attached to the ALB for https traffic.*
 
 <p align="left">
-  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
+  <img src="./doc/image/acm.png" alt="LEMP Diagram" width="400">
 </p
 
-🔹**Jenkins Installation (User Data):**
+🔹**EC2 Installation (User Data):**
 
-  - *During EC2 instance creation, a user data script automatically installs and configures Jenkins and Terraform.*
-  - **Script used:** jenkins-runner-script/jenkins-installer.sh*
-
-<p align="left">
-  <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
-</p
+  - *During EC2 instance creation, a user data script automatically installs app + configures database.*
+  - **Script used:** template/ec2_install_app.sh*
 
 🔹**Accessing Jenkins:**
   - *Once Terraform apply completes and DNS propagation finishes:*
