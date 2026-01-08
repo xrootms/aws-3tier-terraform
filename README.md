@@ -51,14 +51,12 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
   <img src="./doc/image/02-hostedzoneimage.png" alt="LEMP Diagram" width="400">
 </p>
 
----
 - 5️⃣ Once you created you will get four records which is **"ns records"**.
 
   <p align="left">
-  <img src="./doc/image/ns-4.png" alt="LEMP Diagram" width="800">
+  <img src="./doc/image/ns-4.png" alt="LEMP Diagram" width="900">
   </p>
   
-  ---
 
 - 6️⃣ Update these ns recode over your domine register's ns recode.
 
