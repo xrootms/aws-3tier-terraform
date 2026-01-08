@@ -116,10 +116,16 @@ sudo python3 EmpApp.py
 🔹**Accessing Flask-App:**
   - *Once Terraform apply completes and DNS propagation finishes:*
   - *Open https://techsaif.gzz.io in your browser.*
-  - 
+ 
 <p align="center">
-  <img src="./doc/image/domain.png" alt="LEMP Diagram" width="400">
+  <img src="./doc/image/domain.png" alt="LEMP Diagram" width="900">
 </p
+
+<p align="center">
+  <img src="./doc/image/amdomin.png" alt="LEMP Diagram" width="900">
+</p
+
+
 
 
 🔹**Hosted zone:**
