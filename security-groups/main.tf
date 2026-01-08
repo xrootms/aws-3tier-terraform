@@ -59,12 +59,12 @@ resource "aws_security_group" "ec2_sg_python_api" {
     cidr_blocks = ["0.0.0.0/0"]
     description = "Allow traffic on port 5000"
   }
-  tags = { Name = "Security Groups to allow traffic on port 5000" }
+  tags = { Name = "Security Group: 5000" }
 }
 
 # Security Group for RDS
 resource "aws_security_group" "rds_mysql_sg" {
-  name        = "rds-sg"
+  name        = "SG for RDS to enable port 3306"
   vpc_id      = var.vpc_id
   description = "Allow access to RDS from EC2 present in public subnet"
 
@@ -75,5 +75,5 @@ resource "aws_security_group" "rds_mysql_sg" {
     security_groups = [aws_security_group.ec2_sg_python_api.id] #Only traffic coming from EC2 instances that have SG-Python-API attached can reach DB on port 3306.
     description     = "Allow MySQL from EC2 SG"
   }
-  tags = { Name = "Security Groups to allow traffic on port 3360" }
+  tags = { Name = "Security Group: 3360" }
 }
