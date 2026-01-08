@@ -92,19 +92,23 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
   <img src="./doc/image/apply.png" alt="LEMP Diagram" width="1000">
 </p>
 
+**ssh EC2**
 ```bash
 ec2="ssh -i ~/Documents/keys/devops_proj1 ubuntu@65.0.133.233"
-
+```
+```bash
 #verify db coonection and tables
 mysql -h mydb.c5ascwcu8igg.ap-south-1.rds.amazonaws.com -u dbuser -p
-
 exit
-#flask App configuration
-# cd /home/ubuntu/ERMS-SRL
+```
+#### Configure the Flask App & start
+```bash
+# flask App configuration
+cd /home/ubuntu/ERMS-SRL
 # Edit the application to use port 5000
 # Update config.py with S3 bucket name and RDS endpoint
 # Run the application
-# sudo python3 EmpApp.py
+sudo python3 EmpApp.py
  ```
 
 
