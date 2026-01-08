@@ -68,14 +68,15 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 
 ## *Step 2:*
 ####  Clone the repo:
-   ```bash
+```bash
    git clone https://github.com/xrootms/https://github.com/xrootms/aws-2tier-architecture-terraform.git
    cd aws-2tier-architecture-terraform
-
+ ```
 #### 2. Copy and edit variables: (Update variable values as needed — VPC, CIDR, public key, region, etc.)
-   ```bash
+ ```bash
    cp terraform.tfvars.example terraform.tfvars
    ```
+
 #### 3. Initialize Terraform:
    ```bash
    terraform init
