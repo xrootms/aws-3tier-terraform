@@ -91,7 +91,7 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
 #### 5. Get ssh connection for EC2:
 
 <p align="left">
-  <img src="./doc/image/apply.png" alt="LEMP Diagram" width="800">
+  <img src="./doc/image/apply.png" alt="LEMP Diagram" width="900">
 </p>
 
 ---
@@ -102,14 +102,14 @@ To work with this whole setup we need to setup  Route53 and in Route53 we first 
   - *The ALB DNS name is mapped to techsaif.gzz.io using a Route 53 A record*
 
 <p align="left">
-  <img src="./doc/image/r53-hotedzone.png" alt="LEMP Diagram" width="800">
+  <img src="./doc/image/r53-hotedzone.png" alt="LEMP Diagram" width="900">
 </p
 
 🔹**SSL Configuration:**
   - *An ACM Certificate is created for: techsaif.gzz.io and attached to the ALB for https traffic.*
 
 <p align="left">
-  <img src="./doc/image/acm.png" alt="LEMP Diagram" width="400">
+  <img src="./doc/image/acm.png" alt="LEMP Diagram" width="900">
 </p
 
 🔹**EC2 Installation (User Data):**
