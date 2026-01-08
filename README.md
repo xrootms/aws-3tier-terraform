@@ -125,6 +125,15 @@ sudo python3 EmpApp.py
   <img src="./doc/image/amdomin.png" alt="LEMP Diagram" width="900">
 </p
 
+#### Verify DB and S3 bucket
+
+<p align="center">
+  <img src="./doc/image/rds-table.png" alt="LEMP Diagram" width="900">
+</p
+
+<p align="center">
+  <img src="./doc/image/s3-object-images.png" alt="LEMP Diagram" width="900">
+</p
 
 
 
